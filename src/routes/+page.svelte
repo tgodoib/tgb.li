@@ -81,7 +81,11 @@
 					{#each data.urls as url}
 						<!-- as Exclude<PageServerData["urls"], undefined> -->
 						<tr>
-							<td><p class="overflow-x-scroll">{url.id}</p></td>
+							<td class="tooltip tooltip-bottom" data-tip={url.id}>
+								<p class="max-w-[50px] truncate">
+									{url.id}
+								</p>
+							</td>
 							<td>
 								<div data-tip={url.url}>
 									<a href={url.url}>{url.url}</a><ExternalLink size={12} class="flex-shrink-0" />
